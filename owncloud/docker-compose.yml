@@ -50,7 +50,7 @@ services:
       - userdata:/mnt/userdata
 
   mariadb:
-    image: linuxserver/mariadb:latest
+    image: jsurf/rpi-mariadb:latest
     container_name: owncloud_mariadb
     restart: always
     environment:
