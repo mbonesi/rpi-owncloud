@@ -24,7 +24,7 @@ Create the volume. Run below in the command line:
 ```bash
 docker volume create -d local --opt type=cifs --opt device=//192.168.1.1/<<PATH TO YOUR SHARE>> --opt 'o=addr=192.168.1.1,username=<<USERNAME>>,password=<<PASSWORD>>,vers=2.0,uid=33,forceuid,file_mode=0770,dir_mode=0770' owncloud_custom_files_noperm
 ```
-> **Note:** The container uses `uid=33` as the `www-data` user. Permissions will not work if this is not added.
+> **Note:** The container uses `uid=33` as the `www-data` user. Permissions will not work if this is not added. To verify for its existence you can run the command: `grep www-data /etc/passwd`
 
 ### Stack
 In Portainer Stacks, deploy the Docker file in `./owncloud`. Change the environment username/password. This stack was modified from [Owncloud's install](https://doc.owncloud.com/server/next/admin_manual/installation/docker/) to run on arm32.
