@@ -63,7 +63,8 @@ Force SSL: True
 HSTS Enabled: True
 
 **Advanced**
-Custom Nginx config: See below. This will block the redirect from the root host to Owncloud. This will limit access from crawlers and bots as they will need to know the full server path.
+Custom Nginx config: See below. This will block the redirect from the root host to Owncloud.
+This will limit access from crawlers and bots as they will need to know the full server path.
     location =/ {
         return 403;
     }
